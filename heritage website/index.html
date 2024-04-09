@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="loginCss.css">
+</head>
+<body>
+  <div class="container">
+    <form id="LoginForm">
+      <h2 id="LogH2">Sign up</h2>
+
+      <div class="form-group">
+        <div class="Box">
+          <input type="text" id="username" name="username" placeholder="Username">
+          <img src="images/user_1077114.png"><br>
+          <div id="error-message1" style="visibility: hidden;"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="Box">
+          <input type="password" id="password" name="password" placeholder = "Password">
+          <img src = "images/lock_8472244.png"><br>
+          <div id="error-message2" style="visibility: hidden;"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="Box">
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+          <img src = "images/password_4773598.png"><br>
+          <div id="error-message3" style="visibility: hidden;"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="Box">
+          <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Phone number" required>
+          <img src = "images/phone-call_597177.png">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="Box">
+          <input type="email" id="email" name="email" placeholder="Email">
+          <img src = "images/email_542689.png"><br>
+          <div id="error-message4" style="visibility: hidden;"></div>
+        </div>
+      </div>
+
+      <div class="policy">
+        <input type="checkbox"> I agree to the <a href="#">privicy</a> nad <a href="#">policy</a>
+      </div>
+
+      <div class="LogBtn" id="LogBtn">
+      <button type="submit">Sign up</button></div>
+    </form>
+  </div>
+
+  <script src="loginScript.js"></script>
+</body>
+</html>

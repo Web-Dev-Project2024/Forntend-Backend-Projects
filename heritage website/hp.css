@@ -1,0 +1,456 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    color: white;
+
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.nav-bar {
+    position: fixed;
+    height: 140px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: transparent;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#logo{
+    width: 10%;
+}
+
+#logo-img{
+    width: 100%;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.search{
+    border: 2px solid black;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.search input{
+    box-sizing: border-box;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 5px;
+    font-size: 20px;
+    background: transparent;
+}
+
+.search button img{
+    width: 100%;
+}
+
+.search button{
+    width: 80px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background: transparent;
+}
+.nav-bar a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: capitalize;
+    opacity: 0.8;
+    transition: all linear 0.4s;
+}
+
+.nav-bar a:hover{
+    opacity: 1;
+    font-size: calc(120%);
+    font-weight: 800;
+}
+
+
+.vid video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.page1{
+    height: 100vh;
+    width: calc(100% - 80px);
+    position: relative;
+    display: flex;
+    color: white;
+    align-items:flex-start;
+    justify-content: center;
+    margin-left: 80px;
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+}
+
+
+.page1 h1{
+    font-size: 130px;
+    font-weight: 800;
+    margin-top: 17vh;
+    position: relative;
+    transition: all linear 0.5s;
+}
+
+.page1 h1:hover {
+    color: orange;
+}
+
+.page1 h1::before{
+    content: "EXPLORE INDIA";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    color: black;
+    -webkit-text-stroke: 2px rgb(255, 166, 0);
+    z-index: -1;
+}
+
+.explore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px;
+    border-radius: 50px;
+    border: 1px solid black;
+    transition: all linear 0.4s;
+    z-index: 0;
+}
+
+.page1 h3{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.explore a{
+    text-decoration: none;
+}
+
+.explore:hover{
+    background-color: orange;
+    padding: 22px;
+    font-size: 60;
+    font-weight: 800;
+    margin: 30px;
+}
+
+.page1 h2{
+    font-size: 80;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+.page1 h4{
+    text-align: left;
+    max-width: 60vw;
+}
+
+.famous_places{
+    padding-left: 80px;
+}
+
+.famous_places h1{
+    font-size: 80px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+/* slide start */
+.slide-container{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+}
+.slide-container .slides{
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+span.next{
+    right: 20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #222;
+} 
+.dotsContainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+.dotsContainer .active{
+    background-color: #555;
+}
+
+@keyframes next1{
+    from{
+        left: 0%
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%
+    }
+    to{
+        left: 0%;
+    }
+}
+/*slider end */
+.page2{
+    height: 200vh;
+    width: 100%;
+    gap: 50px;
+}
+
+.about_us_heading{
+    text-align: start;
+    padding-left: 80px;
+}
+
+.about_us_heading h1{
+    font-size: 90px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.sec{
+    /*background-color: red;*/
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 70px;
+}
+
+.sec1{
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: all linear 0.6s;
+}
+
+#about_us{
+    background-image: url("images/about_us.jpg");
+}
+
+#gallery{
+    background-image: url("images/explore_india.jpg");
+}
+
+#blog{
+    background-image: url("images/red-fort-complex-agra.webp");
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    background-color: orange;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all linear 0.6s;
+}
+
+.overlay p{
+    font-weight: 400;
+}
+
+.overlay h4{
+    padding-top: 30%;
+    font-size: calc(235%);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+
+.sec1:hover .overlay{
+    opacity: 1;
+}
+
+.sec1:hover{
+    transform: rotate3d(1, -1, 0, 20deg);
+}
+
+
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}

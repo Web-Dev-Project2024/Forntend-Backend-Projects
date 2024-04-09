@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="hp.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="nav-bar">
+            <div id="logo">
+                <img id = "logo-img" src="D:\html\heritage images\unnamed.png" alt="logo">
+            </div>
+            
+            <div class="search">
+                <input type="text" placeholder="seach...">
+                <button type="submit">Seach</button>
+            </div>
+        
+            <div class="gallary">
+                <a href="#">gallary</a>
+            </div>
+    
+            <div class="about-us"> 
+                <a href="#">about us</a>
+            </div>
+    
+            <div class="contact-us">
+                <a href="#">Contact us</a>
+            </div>
+        </div>
+
+        <div class="vid">
+            <video autoplay muted loop src = "images/lv_0_20240403221908.mp4"></video>
+        </div>
+
+        <div class="main">
+            <div class="page1">
+                <h1>EXPLORE INDIA</h1>
+
+                <h4>At Discover India's Heritage, we invite you on a journey through time and culture as we showcase the rich tapestry of India's heritage sites. From ancient temples to majestic forts, each site holds stories of glory, resilience, and the vibrant spirit of India.
+
+                    Explore our curated collection of iconic landmarks, UNESCO World Heritage Sites, and hidden gems tucked away in every corner of this diverse land. Immerse yourself in the architectural marvels, sacred sanctuaries, and living testaments to India's past.
+                    
+                    Join us in preserving and celebrating the legacy of India's heritage, as we delve into the depths of history and unlock the treasures of our extraordinary nation.
+                    
+                    Begin your adventure today and uncover the wonders of India's heritage with us.
+                </h4>
+
+                <div class="explore">
+                    <a href="#"><h3>Explore More</h3></a>
+                </div>
+            </div>
+
+
+            <div class="page2">
+
+                <div class="famous_places">
+                    <h1>Top 7 famous places in india</h1>
+                </div>
+
+                <div class="slide-container">
+	
+                    <div class="slides">
+                        <img src="images/about_us.jpg" class="active">
+                        <img src="images/heritage-sites-in-india-jantar-mantar-jaipur.webp">
+                        <img src="images/heritage-sites-in-india-virupaksha-temple-hampi-karnataka.webp">
+                        <img src="images/heritage-sites-in-india.webp">
+                        <img src="images/Sun-Temple-at-Konarak.webp">
+                        <img src="images/temple-mahabodhi-bodh-gaya.webp">
+                    </div>
+                
+                    <div class="buttons">
+                        <span class="next">&#10095;</span>
+                        <span class="prev">&#10094;</span>
+                    </div>
+                
+
+                    <div class="dotsContainer">
+                        <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+                        <div class="dot" attr='1' onclick="switchImage(this)"></div>
+                        <div class="dot" attr='2' onclick="switchImage(this)"></div>
+                        <div class="dot" attr='3' onclick="switchImage(this)"></div>
+                        <div class="dot" attr='4' onclick="switchImage(this)"></div>
+                        <div class="dot" attr='5' onclick="switchImage(this)"></div>
+                    </div>
+                
+                </div>
+                
+
+                <div class="about_us_heading">
+                    <h1>want to know about us ?</h1>
+                </div>
+                
+                <div class="sec">
+                    <div class="sec1" id="about_us">
+                        <div class="overlay">
+                            <h4>about us</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam maxime doloremque natus laborum ex, rem saepe voluptatum perspiciatis necessitatibus a.</p>
+                        </div>
+                    </div>
+                    <div class="sec1" id="gallery">
+                        <div class="overlay">
+                            <h4>about us</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam maxime doloremque natus laborum ex, rem saepe voluptatum perspiciatis necessitatibus a.</p>
+                        </div>
+                    </div>
+                    <div class="sec1" id="blog">
+                        <div class="overlay">
+                            <h4>about us</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam maxime doloremque natus laborum ex, rem saepe voluptatum perspiciatis necessitatibus a.</p>
+                        </div>
+                </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footerContainer">
+                    <div class="socialIcons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                    <div class="footerNav">
+                        <ul><li><a href="">Home</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">our Team</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="footerBottom">
+                    <p>Copyright &copy;2024; Designed by <span class="designer">Explore India</span></p>
+                </div>
+            </footer>
+
+            
+        </div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="hp.js"></script>
+    </body>
+</html>
